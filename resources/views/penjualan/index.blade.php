@@ -1,7 +1,3 @@
-@php
-    // This is a comment to satisfy PHP block requirement
-@endphp
-
 @extends('layouts.app')
 
 @section('title', 'Data Penjualan')
@@ -16,20 +12,17 @@
                         <i class="fas fa-plus-circle me-1"></i> Tambah Penjualan
                     </a>
                 </div>
-                <div class="col-md-6">
-                    <form action="{{ route('penjualan.index') }}" method="GET" class="row g-2">
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" placeholder="Cari pembeli/kasir..." name="search" value="{{ request('search') }}">
-                        </div>
-                        <div class="col-md-3">
+                <div class="col-md-6 d-flex flex-column flex-md-row align-items-center">
+                    <form action="{{ route('penjualan.index') }}" method="GET" class="row g-2 w-100">
+                        <div class="col-md-3 col-6">
                             <input type="date" class="form-control" name="tanggal_mulai" value="{{ request('tanggal_mulai') }}">
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-6">
                             <input type="date" class="form-control" name="tanggal_akhir" value="{{ request('tanggal_akhir') }}">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-12">
                             <button class="btn btn-outline-secondary w-100" type="submit">
-                                <i class="fas fa-search"></i> Cari
+                                <i class="fas fa-search"></i>
                             </button>
                         </div>
                     </form>

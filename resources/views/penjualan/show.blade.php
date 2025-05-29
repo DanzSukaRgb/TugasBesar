@@ -78,7 +78,7 @@
                         <a href="{{ route('penjualan.index') }}" class="btn btn-secondary">
                             <i class="fas fa-arrow-left me-1"></i> Kembali
                         </a>
-                        <a href="{{ route('penjualan.cetak-invoice', $penjualan->id) }}" class="btn btn-primary">
+                        <a href="{{ route('penjualan.invoice', $penjualan->id) }}" class="btn btn-primary">
                             <i class="fas fa-print me-1"></i> Cetak Invoice
                         </a>
                     </div>
