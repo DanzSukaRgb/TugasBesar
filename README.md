@@ -30,5 +30,5 @@ A modern, secure, and minimalist login page for Toko Online, built with Laravel 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/toko-online-login.git
-   cd toko-online-login
+   git clone https://github.com/DanzSukaRgb/TugasBesar
+   cd TugasBesar
