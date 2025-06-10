@@ -9,7 +9,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <a href="{{ route('kategori.create') }}" class="btn btn-primary">
-                        <i class="fas fa-plus-circle me-1"></i> Tambah Kategori
+                        <i class="fas fa-plus-circle me-1"></i>
                     </a>
                 </div>
                 <div class="col-md-4">
@@ -38,7 +38,7 @@
                         @forelse($kategoris as $index => $kategori)
                         <tr>
                             <td>{{ $kategoris->firstItem() + $index }}</td>
-                            <td>{{ $kategori->nama }}</td>
+                            <td class="text-truncate" style="max-width: 1px">{{ $kategori->nama }}</td>
                             <td>{{ $kategori->barangs->count() }}</td>
                             <td>
                                 <div class="btn-group" role="group">

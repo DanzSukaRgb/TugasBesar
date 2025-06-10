@@ -31,7 +31,7 @@ class PembeliController extends Controller
         $request->validate([
             'nama'          => 'required|string|max:255',
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
-            'alamat'        => 'required|string',
+            'alamat'        => 'required|string|max:250',
             'no_hp'         => 'required|string|max:15',
         ]);
 
@@ -54,7 +54,7 @@ class PembeliController extends Controller
         $request->validate([
             'nama'          => 'required|string|max:255',
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
-            'alamat'        => 'required|string',
+            'alamat'        => 'required|string|max:100',
             'no_hp'         => 'required|string|max:15',
         ]);
 

@@ -9,7 +9,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <a href="{{ route('penjualan.create') }}" class="btn btn-primary">
-                        <i class="fas fa-plus-circle me-1"></i> Tambah Penjualan
+                        <i class="fas fa-plus-circle me-1"></i>
                     </a>
                 </div>
                 <div class="col-md-6 d-flex flex-column flex-md-row align-items-center">
@@ -34,7 +34,6 @@
                     <thead class="table-light">
                         <tr>
                             <th>No</th>
-                            <th>ID Penjualan</th>
                             <th>Pembeli</th>
                             <th>Kasir</th>
                             <th>Tanggal</th>
@@ -46,7 +45,6 @@
                         @forelse($penjualans as $index => $penjualan)
                         <tr>
                             <td>{{ $penjualans->firstItem() + $index }}</td>
-                            <td>{{ $penjualan->id }}</td>
                             <td>{{ $penjualan->pembeli->nama ?? 'N/A' }}</td>
                             <td>{{ $penjualan->kasir->username ?? 'N/A' }}</td>
                             <td>{{ date('d-m-Y', strtotime($penjualan->tanggal_pesan)) }}</td>

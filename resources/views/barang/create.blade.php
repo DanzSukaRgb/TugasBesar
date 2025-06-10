@@ -1,6 +1,4 @@
-@php
-    // This is a comment to satisfy PHP block requirement
-@endphp
+
 
 @extends('layouts.app')
 

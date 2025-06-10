@@ -19,18 +19,6 @@
                     <input type="date" class="form-control" name="tanggal_akhir" value="{{ request('tanggal_akhir', date('Y-m-d')) }}">
                 </div>
 
-                <div class="col-md-4 mb-3">
-                    <label class="form-label">Kasir</label>
-                    <select class="form-select" name="kasir_id">
-                        <option value="">Semua Kasir</option>
-                        @foreach($users as $user)
-                            <option value="{{ $user->id }}" {{ request('kasir_id') == $user->id ? 'selected' : '' }}>
-                                {{ $user->username }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
                 <div class="col-12 d-flex justify-content-between">
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-filter me-1"></i> Filter
@@ -58,7 +46,7 @@
                             <th>No</th>
                             <th>Tanggal</th>
                             <th>Pembeli</th>
-                            <th>Kasir</th>
+                            <th>Nama</th>
                             <th>Total Harga</th>
                             <th>Detail</th>
                         </tr>

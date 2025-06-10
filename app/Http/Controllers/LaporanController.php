@@ -11,7 +11,7 @@ class LaporanController extends Controller
 {
     public function penjualan(Request $request)
     {
-        $users = User::all();
+        // $users = User::all();
         $query = Penjualan::with(['pembeli', 'kasir', 'detailPenjualans.barang']);
 
         if ($request->has('tanggal_mulai') && $request->has('tanggal_akhir')) {
@@ -25,7 +25,7 @@ class LaporanController extends Controller
         $penjualans      = $query->orderBy('tanggal_pesan', 'desc')->get();
         $totalPendapatan = $penjualans->sum('total');
 
-        return view('laporan.penjualan', compact('penjualans', 'users', 'totalPendapatan'));
+        return view('laporan.penjualan', compact('penjualans', 'totalPendapatan'));
     }
 
     public function stokBarang()
